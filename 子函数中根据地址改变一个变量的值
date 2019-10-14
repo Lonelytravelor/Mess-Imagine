@@ -1,0 +1,16 @@
+#include<stdio.h>
+//改变变量的值
+void change( int *a)
+{
+	*a = 20;
+ } 
+
+//主函数
+int main()
+{
+	int a;
+	a = 5;
+	printf("交换前a=%d\n",a);
+	change( &a );
+	printf("交换后a=%d\n",a);
+}
