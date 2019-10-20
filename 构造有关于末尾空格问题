@@ -1,0 +1,25 @@
+   //打印一排数最后一期
+   //首先打印第一个数字，后判断是否存在第二个数
+   //格式为    %d    %d
+   void PrintList( List L )
+   {
+   	Position P;
+   	P = L->Next;
+   	
+   	if( P == NULL ){
+   		printf("链表为空"); 
+	}else{
+		printf("%d %d",P->coefficient,P->index);
+		P = P->Next;
+		while( P != NULL ){
+			if( P->coefficient != 0 ){
+	  			printf(" %d %d",P->coefficient,P->index);
+	  			P = P->Next;
+			}
+			  else{
+			  	P = P->Next;
+			} 
+		}
+	  printf("\n");		
+	}	   
+} 
